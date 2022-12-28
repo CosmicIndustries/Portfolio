@@ -1,14 +1,24 @@
 /* Body and base font styles */
 body {
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
   color: white;
   background-color: #222;
+}
+@font-face {
+  font-family: 'Hacked';
+  src: url('https://www.fontmirror.com/app_public/files/t/1/2020/03/Hacked.ttf');format('truetype');
+}
+
+body {
+ background: linear-gradient(to bottom, #222, #333);
+  font-family: 'Hacked', sans-serif;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #ff6600;
+/*  font-family: 'Roboto Condensed', sans-serif;/*
+  text-shadow: 0 0 5px #ffcc00;
+color: #ff6600;
 }
 
 /* Links */
@@ -33,6 +43,9 @@ a:hover {
 .cyberpunk-element:hover {
   background-color: #ff6600;
   color: #222;
+}
+.glitch {
+  filter: hue-rotate(90deg) invert(1);
 }
 
 
