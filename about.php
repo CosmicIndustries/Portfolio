@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Penetration Testing Portfolio</title>
-	<link rel="stylesheet" href="basic.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/basic.css" type="text/css" media="screen">
   </head>
   <body>
     <header>
@@ -10,10 +10,10 @@
     <nav>
 	</br>
       <ul>
-        <li><a href="basic.php">Home</a></li>
-        <li><a href="services.php">Services</a></li>
-        <li><a href="projects.php">Projects</a></li>
-        <li><a href="contact.php">Contact</a></li>
+        <li><a href="/basic.php">Home</a></li>
+        <li><a href="/services.php">Services</a></li>
+        <li><a href="/projects.php">Projects</a></li>
+        <li><a href="/contact.php">Contact</a></li>
       </ul>
     </nav>
     <main>
