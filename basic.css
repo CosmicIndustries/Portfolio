@@ -24,7 +24,10 @@ h1 {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-
+  justify-content: space-between;
+  padding: 20px;
+}
+
 
 
 nav ul {
