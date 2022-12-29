@@ -68,9 +68,10 @@ nav li {
 .glitch {
   filter: hue-rotate(90deg) invert(0);
 }
+/*Footer*/
 footer {
   /*background-color: #eee;*/
-  color: #333;
+  color: #666;
   padding: 20px;
   text-align: center;
    filter: hue-rotate(90deg) invert(1);
