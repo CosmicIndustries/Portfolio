@@ -39,8 +39,8 @@ a:hover {
 }
 nav {
   display: flex;
-  align-items: center;
-  justify-content: right-space-between;
+  align-items: right;
+  justify-content: space-between;
   padding: 20px;
 }
 nav ul {
