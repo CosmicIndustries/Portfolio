@@ -40,7 +40,7 @@ a:hover {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: right-space-between;
   padding: 20px;
 }
 nav ul {
@@ -98,7 +98,6 @@ a {
 a:hover {
   color: #ffffff;
 }
-
 
  /*Rest of the styles go here
 
