@@ -6,7 +6,8 @@ body {
 }
 @font-face {
   font-family: 'Hacked';
-  src: url('https://www.fontmirror.com/app_public/files/t/1/2020/03/Hacked.ttf');format('truetype');
+  src: url('https://www.fontmirror.com/app_public/files/t/1/2020/03/Hacked.ttf');
+  format('true-type');
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-/*  font-family: 'Roboto Condensed', sans-serif;/*
+/*  font-family: 'Roboto Condensed', sans-serif;*/
   text-shadow: 0 0 5px #ffcc00;
 color: #ff6600;
 }
