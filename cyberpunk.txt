@@ -1,0 +1,543 @@
+:root {
+  --glitched-duration: 0.9s;
+  --glitched-long-duration: 3s;
+  --yellow-color: #f9f002;
+  --yellow-color-opacity: #f9f00242;
+  --orange-color: #ff9800;
+  --border-color: #8ae66e;
+  --red-color: #ff003c;
+  --blue-color: #0c5f74;
+  --green-color: #298d29;
+  --purple-color: purple;
+  --neon-color: #39ff14;
+  --black-color: #000;
+}
+
+@font-face {
+  font-family: 'Hacked';
+  src: url(data:font/ttf;charset=utf-8;base64,) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--yellow-color);
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+}
+
+body * {
+  font-family: "Advent Pro", arial;
+}
+
+/* Form fields */
+
+input[type="text"].cyberpunk,
+input[type="date"].cyberpunk,
+input[type="time"].cyberpunk,
+input[type="file"].cyberpunk,
+input[type="number"].cyberpunk,
+input[type="phone"].cyberpunk,
+input[type="password"].cyberpunk,
+textarea.cyberpunk,
+select.cyberpunk,
+.cyberpunk input[type="text"],
+.cyberpunk input[type="date"],
+.cyberpunk input[type="time"],
+.cyberpunk input[type="file"],
+.cyberpunk input[type="number"],
+.cyberpunk input[type="phone"],
+.cyberpunk input[type="password"],
+.cyberpunk textarea,
+.cyberpunk select {
+  width: calc(100% - 30px);
+  border: 30px solid var(--black-color);
+  border-left: 5px solid var(--black-color);
+  border-right: 5px solid var(--black-color);
+  border-bottom: 15px solid var(--black-color);
+  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
+  margin-bottom: 10px;
+  padding: 12px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  /*caret-shape: underscore;*/
+}
+
+input[type="password"].cyberpunk,
+.cyberpunk input[type="password"] {
+  font-family: 'Hacked';
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 2px;
+}
+
+textarea.cyberpunk,
+.cyberpunk textarea {
+  min-height: 120px;
+  clip-path: polygon(0px 0px, 50px 0px, 75px 26px, 105px 26px, 130px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
+}
+
+select.cyberpunk,
+.cyberpunk select {
+  width: 100%;
+  appearance: none;
+  position: relative;
+  clip-path: polygon(0px 25px, 60px 25px, 85px 0px, calc(60% - 25px) 0px, 60% 25px, calc(100% - 80px) 25px, calc(100% - 55px) 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
+}
+
+select.cyberpunk option,
+.cyberpunk select option {
+  color: var(--yellow-color);
+  background-color: var(--black-color);
+}
+
+input[type="radio"].cyberpunk,
+.cyberpunk input[type="radio"] {
+  border-radius: 15%;
+  z-index: 100;
+  height: 14px;
+  width: 20px;
+  appearance: none;
+  outline: none;
+  background-color: var(--black-color);
+  cursor: pointer;
+  position: relative;
+  margin: 0px;
+  display: inline-block;
+}
+
+input[type="radio"].cyberpunk:after,
+.cyberpunk input[type="radio"]:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 6px;
+  background-color: var(--yellow-color);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: background 0.3s, left 0.3s;
+}
+
+input[type="radio"].cyberpunk:checked:after ,
+.cyberpunk input[type="radio"]:checked:after{
+  background-color: var(--border-color);
+  left: 10px;
+}
+
+input[type="checkbox"].cyberpunk,
+.cyberpunk input[type="checkbox"] {
+  border-radius: 15%;
+  z-index: 100;
+  height: 20px;
+  width: 20px;
+  appearance: none;
+  outline: none;
+  background-color: var(--black-color);
+  cursor: pointer;
+  position: relative;
+  margin: 0px;
+  margin-bottom: -3px;
+  display: inline-block;
+}
+
+input[type="checkbox"].cyberpunk:before,
+.cyberpunk input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--yellow-color);
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+}
+
+input[type="checkbox"].cyberpunk:after,
+.cyberpunk input[type="checkbox"]:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 7px;
+  background-color: var(--yellow-color);
+  position: absolute;
+  top: 3px;
+  left: 9px;
+}
+
+input[type="checkbox"].cyberpunk:checked:before,
+.cyberpunk input[type="checkbox"]:checked:before {
+  border-color: var(--border-color);
+  border-top-color: transparent;
+}
+
+input[type="checkbox"].cyberpunk:checked:after,
+.cyberpunk input[type="checkbox"]:checked:after {
+  background-color: var(--border-color);
+}
+
+.cyberpunk fieldset,
+fieldset.cyberpunk {
+  border: 3px dotted var(--purple-color);
+  margin: 10px 0px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  background-color: var(--yellow-color);
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  display: none;
+}
+::-webkit-scrollbar-track-piece {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--red-color);
+  border-bottom: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
+  transition: background var(--glitched-duration);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--orange-color);
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-resizer {
+  display: none;
+}
+
+/* Separator */
+
+hr.cyberpunk {
+  height: 14px;
+  background-color: var(--black-color);
+  width: 100%;
+  border: none;
+  clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+}
+
+hr.cyberpunk.glitched {
+  animation-name: hr;
+  animation-duration: var(--glitched-long-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes hr {
+  0% {
+    transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
+  }
+  15% {
+    transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
+  }
+  16% {
+    transform: skew(20deg);
+    clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+    margin-left: -20px;
+  
+  }
+  20% {
+    transform: skew(-20deg);
+    clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+    margin-left: 20px;  
+  }
+  21% {
+    transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
+  }
+  65% {
+    transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
+    transform: scaleX(1);
+  }
+  66% {
+    transform: skew(20deg);
+    clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+    margin-left: -5px;
+    transform: scaleX(-1);
+  
+  }
+  70% {
+    transform: skew(40deg);
+    clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+    margin-left: 20px;  
+    transform: scaleX(-1);
+  }
+  71% {
+    transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
+    transform: scaleX(0);
+  }
+  100% {
+    transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
+  }
+}
+
+/* Images frames */
+
+img.cyberpunk,
+.cyberpunk img {
+  padding: 30px ;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 15px;
+  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
+  background-color: var(--black-color);
+  max-width: calc(100% - 10px);
+}
+
+/* Paragraphs and lists */
+
+p.cyberpunk,
+.cyberpunk p {
+  border: 30px solid var(--black-color);
+  border-right: 5px solid var(--black-color);
+  border-left: 5px solid var(--black-color);
+  border-bottom: 24px solid var(--black-color);
+  padding: 5px;
+  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
+  background-color: var(--yellow-color);
+  font-size: 1.2rem;
+  position: relative;
+}
+
+p.cyberpunk.inverse,
+.cyberpunk p.inverse {
+  border: none;
+  padding: 40px 15px 30px;
+  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
+  background-color: var(--black-color);
+  color: var(--yellow-color);
+  border-right: 3px solid var(--border-color);
+}
+
+p.cyberpunk:before,
+.cyberpunk p:before {
+  content: "P-14";
+  display: block;
+  position: absolute;
+  bottom: -12px;
+  right: 25px;
+  padding: 2px 2px 0px 2px;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: var(--black-color);
+  background-color: var(--yellow-color);
+  border-left: 2px solid var(--border-color);
+}
+
+p.cyberpunk.inverse:before,
+.cyberpunk p.inverse:before {
+  content: "T-71";
+  right:90px;
+  bottom: 9px;
+}
+
+section.cyberpunk.black p.cyberpunk.inverse:before,
+section.cyberpunk.black p.cyberpunk:before,
+section.cyberpunk.black p.inverse:before,
+section.cyberpunk.black p:before {
+ background-color: var(--black-color);
+ color: var(--yellow-color);
+}
+
+p.cyberpunk:hover:before,
+.cyberpunk p:hover:before {
+  animation-name: buttonhoverafter;
+  animation-duration: var(--glitched-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+p.cyberpunk.scannedh,
+p.cyberpunk.scannedv,
+.cyberpunk p.scannedh,
+.cyberpunk p.scannedv {
+  position: relative;
+}
+
+p.cyberpunk.scannedh:after,
+.cyberpunk p.scannedh:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--border-color) !important;
+  box-shadow: 0px 0px 10px 4px var(--border-color);
+  animation-name: scannedh;
+  animation-duration: var(--glitched-long-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes scannedh {
+  0% {
+    top: -27px;
+  }
+  50% {
+  }
+  51% {
+  }
+  100% {
+    top: calc(100% + 12px);
+  }
+}
+
+p.cyberpunk.scannedv:after,
+.cyberpunk p.scannedv:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  height: calc(100% + 55px);
+  width: 3px;
+  background-color: var(--border-color) !important;
+  box-shadow: 0px 0px 10px 4px var(--border-color);
+  animation-name: scannedv;
+  animation-duration: calc(var(--glitched-long-duration) * 3);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes scannedv {
+  0% {
+    left: 0px;
+  }
+  50% {
+  }
+  51% {
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes hxafter {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+ul.cyberpunk > li,
+.cyberpunk ul > li {
+  list-style: none;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+ul.cyberpunk > li:before:not(ul.steps li:before),
+.cyberpunk ul > li:before:not(ul.steps li:before)  {
+  content: " ";
+  top: 0px;
+  left: calc(-1.2rem - 10px);
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--black-color);
+  position: absolute;
+  display: block;
+  clip-path: polygon(0% 10%, 100% 70%, 40% 100%, 50% 70%);
+}
+
+ol.cyberpunk,
+.cyberpunk ol {
+  list-style-type:hiragana-iroha; counter-reset: li
+}
+
+ol.cyberpunk > li,
+.cyberpunk ol > li {
+  list-style: none;
+  position: relative;
+  font-size: 1.2rem;
+  counter-increment: li;
+}
+
+ol.cyberpunk li:before,
+.cyberpunk ol > li:before {
+  content: counter(li);
+  top: 0px;
+  left: calc(-1.2rem - 10px);
+  width: 1.2rem;
+  height: 1.2rem;
+  color:var(--yellow-color);
+  background-color: var(--black-color);
+  font-weight: 700;
+  position: absolute;
+  display: block;
+  clip-path: polygon(0% 0%, 60% 0%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+ol.cyberpunk li.glitched,
+ul.cyberpunk li.glitched,
+.cyberpunk ol > li.glitched,
+.cyberpunk ul > li.glitched {
+  animation-name: liglitched;
+  animation-duration: var(--glitched-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+ol.cyberpunk li.glitched:nth-child(3n+3),
+ul.cyberpunk li.glitched:nth-child(1),
+.cyberpunk ol > li.glitched:nth-child(3n+3),
+.cyberpunk ul > li.glitched:nth-child(1) {
+  animation-duration: calc(var(--glitched-duration) * 0.5);
+}
+
+ol.cyberpunk li.glitched:nth-child(5n+5),
+ul.cyberpunk li.glitched:nth-child(5n+5),
+.cyberpunk ol > li.glitched:nth-child(5n+5),
+.cyberpunk ul > li.glitched:nth-child(5n+5) {
+  animation-duration: calc(var(--glitched-duration) * 0.7);
+  animation-timing-function: ease-out; 
+}
+
+ol.cyberpunk li.glitched:nth-child(2n+2),
+ul.cyberpunk li.glitched:nth-child(2n+2),
+.cyberpunk ol > li.glitched:nth-child(2n+2),
+.cyberpunk ul > li.glitched:nth-child(2n+2) {
+  animation-duration: calc(var(--glitched-duration) * 1.5);
+  animation-timing-function: ease-in-out;
+}
+
+ol.cyberpunk li.glitched:nth-child(4n+4),
+ul.cyberpunk li.glitched:nth-child(4n+4),
+.cyberpunk ol > li.glitched:nth-child(4n+4),
+.cyberpunk ul > li.glitched:nth-child(4n+4) {
+  animation-duration: calc(var(--glitched-duration) * 1.2);
+  animation-timing-function: ease-in;
+}
