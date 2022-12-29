@@ -18,7 +18,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
   color: white;
 }
 /* Headings */
@@ -29,7 +29,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 60vw;
 color: #ff6600;
 }
-
+h2{
+height: 5vh;
+  width: 60vw;
+}
 /* Links */
 a {
   color: #ff6600;
@@ -44,6 +47,7 @@ nav {
   align-items: right;
   justify-content: space-between;
   padding: 20px;
+  height: 10vh;
 }
 nav ul {
   display: flex;
