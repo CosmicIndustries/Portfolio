@@ -25,6 +25,7 @@ header {
 h1, h2, h3, h4, h5, h6 {
 /*  font-family: 'Roboto Condensed', sans-serif;*/
   text-shadow: 0 0 5px #ffcc00;
+  height: 15vh;
 color: #ff6600;
 }
 
