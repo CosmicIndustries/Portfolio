@@ -69,7 +69,7 @@ nav li {
   filter: hue-rotate(90deg) invert(1);
 }
 footer {
-  background-color: #eee;
+  /*background-color: #eee;*/
   color: #333;
   padding: 20px;
   text-align: center;
