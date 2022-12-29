@@ -75,7 +75,7 @@ footer {
   color: #111;
   padding: 20px;
   text-align: center;
-   filter: hue-rotate(90deg) invert(1);
+   filter: hue-rotate(90deg) invert(0);
 }
 
 /* Revised cyberpunk styles
