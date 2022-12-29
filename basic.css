@@ -68,7 +68,12 @@ nav li {
 .glitch {
   filter: hue-rotate(90deg) invert(1);
 }
-
+footer {
+  background-color: #eee;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
 
 /* Revised cyberpunk styles
 body {
@@ -94,6 +99,7 @@ a:hover {
   color: #ffffff;
 }
 
+
  /*Rest of the styles go here
 
  /*Revised styles for sections
@@ -118,12 +124,7 @@ p {
   margin: 0;
   padding: 0;
 }
-footer {
-  background-color: #eee;
-  color: #333;
-  padding: 20px;
-  text-align: center;
-}
+
  /*Revised holographic styles
 .holographic {
   background-image: linear-gradient(to right, #00ffff, #ffff00, #ff00ff);
