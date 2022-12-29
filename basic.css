@@ -198,13 +198,25 @@ p {
 }
 
 @media (max-width: 500px) {
-  .card {
+  .card,header,h1 {
     width: 45%;
+     font-size: 38px;
   }
 }
 
 @media (max-width: 400px) {
-  .card {
+  .card,header,h1 {
     width: 90%;
+     font-size: 28px;
   }
+}
+@media (max-width: 100px) {
+  .card,header,h1,p,section {
+    width: 90%;
+    height: 2vh;
+     font-size: 1px;
+     margin:0;
+  }
+  nav{1vh;}
+
 }
