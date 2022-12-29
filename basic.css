@@ -1,8 +1,11 @@
 /* Body and base font styles */
 body {
+background: linear-gradient(to bottom, #222, #333);
+  font-family: 'Hacked', sans-serif;
+  align-items: center;
+  justify-content: center;
   /*font-family: 'Roboto', sans-serif;*/
   color: white;
-  background-color: #222;
 }
 @font-face {
   font-family: 'Hacked';
@@ -10,14 +13,10 @@ body {
   format('true-type');
 }
 
-body {
- background: linear-gradient(to bottom, #222, #333);
-  font-family: 'Hacked', sans-serif;
-}
 header {
-  display: flex;
-  align-items: center;
+align-items: center;
   justify-content: center;
+ display: flex;
   height: 90vh;
   color: invert(1);
 }
