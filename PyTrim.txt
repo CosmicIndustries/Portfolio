@@ -1,0 +1,18 @@
+import re
+
+
+def remove_everything_but_divs_and_hrefs(html):
+    # Find all div elements and href attributes using a regular expression
+    divs_and_hrefs = re.findall(r'<(div|href)[^>]*>', html)
+
+    # Remove all other content from the HTML
+    html = re.sub(r'<[^(div|href)][^>]*>', '', html)
+
+    # Return the trimmed HTML
+    return html.strip()
+
+
+# Example usage
+html = '<html><head><title>Example</title></head><body><div>Div content</div><p>Paragraph content</p><a href="#">Link</a></body></html>'
+trimmed_html = remove_everything_but_divs_and_hrefs(html)
+print(trimmed_html)
