@@ -1,3 +1,4 @@
+<!DOCTYPE txt>
 Title: "Disclosure of Input Validation Vulnerability on [Redacted until enacted]'s Trial Demo Website"
 
 Introduction:
