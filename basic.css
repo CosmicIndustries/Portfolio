@@ -1,6 +1,6 @@
 /* Body and base font styles */
 body {
-font-family: 'Hacked', sans-serif;
+font-family: 'consolas' , sans-serif;
 align-items: center;
 justify-content: center;
 color: #400101; /* secondary color */
