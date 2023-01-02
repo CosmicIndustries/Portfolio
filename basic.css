@@ -5,7 +5,7 @@ align-items: center;
 justify-content: center;
 color: #400101; /* secondary color */
  background:linear-gradient(35deg,#4E4E4E, #75726D, #8A8B86) left/300% 100%;
-  animation:f 5.1337s infinite alternate linear;
+  animation:f 6s infinite alternate linear;
 }
 /*Hexagons?
 html {
@@ -34,10 +34,7 @@ html {
   background:linear-gradient(165deg,red, purple, blue) left/400% 100%;
   animation:f 5.1337s infinite alternate linear;
 }
-
-@keyframes f {
-  100% {background-position:right}
-}*/
+*/
 
 /* Links */
 a {
@@ -235,6 +232,11 @@ p {
   display: block;
 }
 */
+
+/*KeyFrames*/
+@keyframes f {
+  100% {background-position:right}
+}
 
 /* Media queries */
 @media (max-width: 700px) {
