@@ -79,6 +79,7 @@ width: 60vw;
 }
 
 nav {
+color: #400101; /* secondary color */
 display: flex;
 align-items: right;
 justify-content: space-between;
@@ -86,6 +87,7 @@ padding: 20px;
 height: 10vh;
 }
 nav ul {
+color: #400101; /* secondary color */
 display: flex;
 list-style: none;
 margin: 0;
