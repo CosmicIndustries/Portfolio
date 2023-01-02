@@ -30,7 +30,7 @@
         </ul>
       </section>
       <section class="card holographic" id="projects">
-        <a href="projects.html" class="glitch"><h2 class="text-3d-3">Projects</h2></a>
+        <a href="Projects.html" class="glitch"><h2 class="text-3d-3">Projects</h2></a>
 <ol>
 <li class="glitch">Network Penetration Testing for a Healthcare Organization: In this project, I used a variety of tools and techniques, including Nmap and Metasploit, to identify vulnerabilities in the healthcare organization's network infrastructure. I provided recommendations for improving security protocols and hardening the network against potential attacks.</li>
 <li class="glitch">Web Application Penetration Testing for an E-Commerce Company: In this project, I used tools such as Burp Suite and sqlmap to identify vulnerabilities in the e-commerce company's web-based applications. I provided recommendations for improving security protocols and hardening the applications against potential attacks.</li>

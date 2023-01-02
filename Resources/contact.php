@@ -12,7 +12,7 @@
       <ul>
         <li><a href="/about.html">About</a></li>
         <li><a href="/services.html">Services</a></li>
-        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/Projects.html">Projects</a></li>
         <li><a href="/basic.html">Home</a></li>
       </ul>
     </nav>
