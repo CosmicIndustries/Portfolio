@@ -263,7 +263,7 @@ p {
   .card,header,h1,p,section {
     width: 90%;
     height: 2vh;
-     font-size: 1px;
+     font-size: 12px;
      margin:0;
   }
   nav{1vh;}
