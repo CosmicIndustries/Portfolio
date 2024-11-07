@@ -1,4 +1,4 @@
-// Contact Form Submission
+// Contact Form Submission with Download as File
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -7,16 +7,28 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const email = sanitizeInput(document.getElementById('email').value);
     const message = sanitizeInput(document.getElementById('message').value);
 
-    // Display sanitized data and reset form
-    alert(`Thank you for reaching out, ${name}. We will get back to you soon.`);
+    // Prepare text file content
+    const content = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const blob = new Blob([content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+
+    // Create and click download link
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'contact_message.txt';
+    link.click();
+
+    // Cleanup and reset form
+    URL.revokeObjectURL(url);
     document.getElementById("contact-form").reset();
+    alert('Thank you for reaching out. We will get back to you soon.');
 });
 
-// Sanitize function to remove special characters from input
+// Sanitize function to remove special characters
 function sanitizeInput(input) {
     const tempDiv = document.createElement('div');
-    tempDiv.textContent = input;  // Encodes HTML characters
-    return tempDiv.innerHTML.replace(/[<>;'"]/g, ""); // Removes additional special characters
+    tempDiv.textContent = input;
+    return tempDiv.innerHTML.replace(/[<>;'"]/g, ""); // Remove any special characters
 }
 
 // Toggle Navbar for Mobile View
@@ -25,7 +37,7 @@ function toggleMenu() {
     navbar.classList.toggle('active');
 }
 
-// Day/Night Mode Toggle
+// Day/Night Mode Toggle with Local Storage Save
 function toggleMode() {
     const darkModeStylesheet = document.getElementById('dark-mode');
     darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
