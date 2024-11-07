@@ -103,3 +103,36 @@ a {
 a:focus {
     outline: 2px dashed #007BFF;
 }
+
+/* Blurb Sections */
+section.blurb {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.blurb h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.blurb p {
+    font-size: 1em;
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
