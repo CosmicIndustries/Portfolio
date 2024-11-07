@@ -1,118 +1,105 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    color: #ccc;
-    background-color: #1e1e2f;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* Header Styling */
-header {
-    background: #101020;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
     color: #fff;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    position: relative;
+    padding: 10px 20px;
 }
+
 header h1 {
-    font-size: 2rem;
-    color: #ff3333; /* Red for Cosmic theme */
+    margin: 0;
 }
-header p {
-    color: #b0b0b0;
-}
+
 .menu-toggle {
-    font-size: 1.5rem;
+    font-size: 24px;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#navbar {
+    display: none;
+    flex-direction: column;
+}
+
+#navbar a {
     color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Navigation */
+.header-container {
+    background-color: #f0f0f0;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.menu-toggle, .toggle-mode {
+    font-size: 1.2em;
+    cursor: pointer;
     background: none;
     border: none;
-    cursor: pointer;
-    position: absolute;
-    right: 1rem;
-    top: 1.5rem;
+    color: inherit;
 }
 
-/* Navigation Menu */
-nav {
-    display: none;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: bold;
-}
-nav a:hover {
-    color: #3498db;
-}
-
-/* Main Sections */
+/* Main Content */
 main {
-    padding: 1rem;
-}
-section {
-    margin-bottom: 2rem;
-}
-section h2 {
-    font-size: 1.8rem;
-    color: #3498db; /* Blue accent for headers */
-}
-section p {
-    color: #aaa;
-}
-
-/* Form Styling */
-form label, form input, form textarea, form button {
-    display: block;
-    width: 100%;
-    margin: 0.5rem 0;
-}
-form input, form textarea {
-    padding: 0.5rem;
-    background: #333;
-    border: 1px solid #444;
-    color: #ddd;
-}
-form button {
-    padding: 0.5rem;
-    background-color: #ff3333; /* Red submit button */
-    color: white;
-    border: none;
-    cursor: pointer;
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
 }
 
 /* Footer */
 footer {
-    background: #101020;
+    background-color: #222;
     color: #fff;
-    padding: 1rem;
     text-align: center;
+    padding: 1em;
 }
-footer a {
-    color: #ff3333;
+
+/* Accessibility & Links */
+a {
+    color: #007BFF;
     text-decoration: none;
 }
 
-/* Responsive Styling for Hamburger Menu */
-@media (max-width: 768px) {
-    nav {
-        display: block;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #101020;
-        width: 100%;
-        padding: 1rem;
-    }
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-    }
+a:focus {
+    outline: 2px dashed #007BFF;
 }
