@@ -7,16 +7,16 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const email = sanitizeInput(document.getElementById('email').value);
     const message = sanitizeInput(document.getElementById('message').value);
 
-    // Display or send sanitized data
+    // Display sanitized data and reset form
     alert(`Thank you for reaching out, ${name}. We will get back to you soon.`);
     document.getElementById("contact-form").reset();
 });
 
-// Sanitize function to remove special characters
+// Sanitize function to remove special characters from input
 function sanitizeInput(input) {
     const tempDiv = document.createElement('div');
     tempDiv.textContent = input;  // Encodes HTML characters
-    return tempDiv.innerHTML.replace(/[<>;'"]/g, ""); // Removes special characters
+    return tempDiv.innerHTML.replace(/[<>;'"]/g, ""); // Removes additional special characters
 }
 
 // Toggle Navbar for Mobile View
