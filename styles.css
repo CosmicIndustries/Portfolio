@@ -1,11 +1,13 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     color: #333;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header and Navigation */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -17,8 +19,10 @@ body {
 
 header h1 {
     margin: 0;
+    font-size: 1.8em;
 }
 
+/* Hamburger Menu */
 .menu-toggle {
     font-size: 24px;
     background: none;
@@ -27,9 +31,10 @@ header h1 {
     cursor: pointer;
 }
 
+/* Navbar styling for Desktop */
 #navbar {
-    display: none;
-    flex-direction: column;
+    display: flex;
+    gap: 1em;
 }
 
 #navbar a {
@@ -38,45 +43,10 @@ header h1 {
     padding: 10px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-/* Base Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header and Navigation */
-.header-container {
-    background-color: #f0f0f0;
-    padding: 1em;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.8em;
-}
-
-nav {
+/* Mobile Navbar - hidden by default, visible when toggled */
+#navbar.active {
     display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-.menu-toggle, .toggle-mode {
-    font-size: 1.2em;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: inherit;
+    flex-direction: column;
 }
 
 /* Main Content */
@@ -84,24 +54,6 @@ main {
     padding: 2em;
     max-width: 800px;
     margin: auto;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-}
-
-/* Accessibility & Links */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:focus {
-    outline: 2px dashed #007BFF;
 }
 
 /* Blurb Sections */
@@ -136,3 +88,70 @@ section.blurb {
     background-color: #0056b3;
     color: #fff;
 }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Accessibility & Links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 2px dashed #007BFF;
+}
+
+/* Day/Night Mode Toggle */
+.toggle-mode {
+    font-size: 1.2em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+}
+
+body.dark-mode .header-container,
+body.dark-mode footer {
+    background-color: #222;
+    color: #f0f0f0;
+}
+
+body.dark-mode .read-more {
+    background-color: #444;
+}
+
+body.dark-mode .read-more:hover {
+    background-color: #666;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+
+    #navbar a {
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid #444;
+    }
+    }
