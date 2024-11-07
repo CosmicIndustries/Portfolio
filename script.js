@@ -3,3 +3,8 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     alert("Thank you for reaching out. We will get back to you soon.");
     document.getElementById("contact-form").reset();
 });
+// Toggle the display of the navigation menu
+function toggleMenu() {
+    const navbar = document.getElementById('navbar');
+    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+        }
