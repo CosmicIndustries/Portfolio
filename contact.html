@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Industries LLC - Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="darkmode.css" id="dark-mode">
+</head>
+<body>
+
+    <!-- Header Section with Hamburger Menu -->
+    <header>
+        <div class="header-container">
+            <h1>Cosmic Industries LLC</h1>
+            <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">&#9776;</button>
+            <nav id="navbar">
+                <a href="automotive.html">Automotive & HVAC</a>
+                <a href="cybersecurity.html">Cybersecurity & IT</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <button class="toggle-mode" onclick="toggleMode()">Day/Night Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section with Blurbs and Read More Buttons -->
+    <main>
+        <section>
+            <h2>Welcome to Cosmic Industries LLC</h2>
+            <p>Your trusted partner in automotive, HVAC, and cybersecurity services, serving both military and civilian sectors.</p>
+        </section>
+       <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+  </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cosmic Industries LLC | <a href="https://cosmicindustries.github.io/militaryLogisticsServices/" aria-label="Visit MLS site">Visit MLS</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
