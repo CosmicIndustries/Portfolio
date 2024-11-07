@@ -3,16 +3,6 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     alert("Thank you for reaching out. We will get back to you soon.");
     document.getElementById("contact-form").reset();
 });
-// Toggle the display of the navigation menu
-function toggleMenu() {
-    const navbar = document.getElementById('navbar');
-    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
-        }
-// Toggle Navbar for Mobile View
-function toggleMenu() {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('active');
-}
 
 // Contact Form Submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -59,11 +49,6 @@ window.addEventListener('DOMContentLoaded', () => {
         document.getElementById('dark-mode').disabled = false;
     }
 });
-// Toggle mobile menu
-function toggleMenu() {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('active');
-}
 
 // Toggle between Day and Night Mode
 function toggleMode() {
