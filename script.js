@@ -33,3 +33,40 @@ function sanitizeInput(input) {
     tempDiv.textContent = input;  // Encodes HTML characters
     return tempDiv.innerHTML.replace(/[<>;'"]/g, ""); // Removes special characters if any
 }
+
+// Toggle Navbar for Mobile View
+function toggleMenu() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('active');
+}
+
+// Day/Night Mode Toggle
+function toggleMode() {
+    const darkModeStyle = document.getElementById('dark-mode');
+    if (darkModeStyle.disabled) {
+        darkModeStyle.disabled = false;
+        localStorage.setItem('theme', 'dark');
+    } else {
+        darkModeStyle.disabled = true;
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Load saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.getElementById('dark-mode').disabled = false;
+    }
+});
+// Toggle mobile menu
+function toggleMenu() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('active');
+}
+
+// Toggle between Day and Night Mode
+function toggleMode() {
+    const darkModeStylesheet = document.getElementById('dark-mode');
+    darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
+}
