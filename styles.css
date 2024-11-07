@@ -1,10 +1,27 @@
 /* Base Styles */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Skip to Content Button */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    padding: 8px;
+    background: #007BFF;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+    top: 10px;
 }
 
 /* Header and Navigation */
@@ -17,12 +34,6 @@ body {
     padding: 10px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.8em;
-}
-
-/* Hamburger Menu */
 .menu-toggle {
     font-size: 24px;
     background: none;
@@ -31,83 +42,23 @@ header h1 {
     cursor: pointer;
 }
 
-/* Navbar styling for Desktop */
 #navbar {
-    display: flex;
-    gap: 1em;
-}
-
-#navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-/* Mobile Navbar - hidden by default, visible when toggled */
-#navbar.active {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
-/* Main Content */
-main {
-    padding: 2em;
-    max-width: 800px;
-    margin: auto;
+#navbar.active {
+    display: flex;
 }
 
-/* Blurb Sections */
-section.blurb {
-    border-bottom: 1px solid #ddd;
-    padding: 1rem 0;
-    margin: 1rem 0;
-}
-
-.blurb h3 {
-    font-size: 1.5em;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.blurb p {
-    font-size: 1em;
-    color: #555;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background-color: #007BFF;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.read-more:hover {
-    background-color: #0056b3;
-    color: #fff;
-}
-
-/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 10px;
 }
 
-/* Accessibility & Links */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:focus {
-    outline: 2px dashed #007BFF;
-}
-
-/* Day/Night Mode Toggle */
+/* Day/Night Mode Button */
 .toggle-mode {
     font-size: 1.2em;
     cursor: pointer;
@@ -115,43 +66,3 @@ a:focus {
     border: none;
     color: inherit;
 }
-
-/* Dark Mode Styling */
-body.dark-mode {
-    background-color: #1c1c1c;
-    color: #f0f0f0;
-}
-
-body.dark-mode .header-container,
-body.dark-mode footer {
-    background-color: #222;
-    color: #f0f0f0;
-}
-
-body.dark-mode .read-more {
-    background-color: #444;
-}
-
-body.dark-mode .read-more:hover {
-    background-color: #666;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    #navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-    }
-
-    #navbar.active {
-        display: flex;
-    }
-
-    #navbar a {
-        padding: 15px;
-        text-align: center;
-        border-top: 1px solid #444;
-    }
-    }
