@@ -1,9 +1,3 @@
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Thank you for reaching out. We will get back to you soon.");
-    document.getElementById("contact-form").reset();
-});
-
 // Contact Form Submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -14,14 +8,15 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const message = sanitizeInput(document.getElementById('message').value);
 
     // Display or send sanitized data
-    alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    alert(`Thank you for reaching out, ${name}. We will get back to you soon.`);
+    document.getElementById("contact-form").reset();
 });
 
 // Sanitize function to remove special characters
 function sanitizeInput(input) {
     const tempDiv = document.createElement('div');
     tempDiv.textContent = input;  // Encodes HTML characters
-    return tempDiv.innerHTML.replace(/[<>;'"]/g, ""); // Removes special characters if any
+    return tempDiv.innerHTML.replace(/[<>;'"]/g, ""); // Removes special characters
 }
 
 // Toggle Navbar for Mobile View
@@ -32,26 +27,13 @@ function toggleMenu() {
 
 // Day/Night Mode Toggle
 function toggleMode() {
-    const darkModeStyle = document.getElementById('dark-mode');
-    if (darkModeStyle.disabled) {
-        darkModeStyle.disabled = false;
-        localStorage.setItem('theme', 'dark');
-    } else {
-        darkModeStyle.disabled = true;
-        localStorage.setItem('theme', 'light');
-    }
+    const darkModeStylesheet = document.getElementById('dark-mode');
+    darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
+    localStorage.setItem('theme', darkModeStylesheet.disabled ? 'light' : 'dark');
 }
 
 // Load saved theme on page load
 window.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.getElementById('dark-mode').disabled = false;
-    }
+    document.getElementById('dark-mode').disabled = savedTheme !== 'dark';
 });
-
-// Toggle between Day and Night Mode
-function toggleMode() {
-    const darkModeStylesheet = document.getElementById('dark-mode');
-    darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
-}
